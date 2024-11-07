@@ -11,7 +11,10 @@ async def search(query: str):
     async def event_stream():
         try:
             async for chunk in graph_app.astream(
-                input={"question": query}, stream_mode=["custom"]
+                input={"question": query},
+                stream_mode=[
+                    "custom",
+                ],
             ):
 
                 yield f"data: {chunk[1]}\n\n"

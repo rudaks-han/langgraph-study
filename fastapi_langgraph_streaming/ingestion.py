@@ -24,7 +24,6 @@ chroma_directory = "./chroma"
 #     collection_name="baseball-chroma",
 #     embedding=OpenAIEmbeddings(),
 #     persist_directory="./chroma",
-#     # persist_directory=chroma_directory,
 # )
 
 retriever = Chroma(
